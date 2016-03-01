@@ -7,10 +7,10 @@
 
 (meditations
   "Some objects can be tagged using the with-meta function"
-  (= __ (meta giants))
+  (= {:league "National League"} (meta giants))
 
   "Or more succinctly with a reader macro"
-  (= __ (meta '^{:division "West"} Giants))
+  (= {:division "West"} (meta '^{:division "West"} Giants))
 
   "While others can't"
   (= __ (try
